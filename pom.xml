@@ -9,11 +9,16 @@
 	<version>1.0.0</version>
 	
 	<properties>
+		<java.version>1.8</java.version>
+		<maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
+		<assertj-core.version>3.8.0</assertj-core.version>
+		
+		<!-- Tests -->
 		<junit-jupiter.version>5.1.0</junit-jupiter.version>
 		<junit-platform-surefire-provider.version>1.0.1</junit-platform-surefire-provider.version>
-		<assertj-core.version>3.8.0</assertj-core.version>
-		<maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
-		<java.version>1.8</java.version>
+		<junit.platform.version>1.0.1</junit.platform.version>
+		<junit.vintage.version>4.12.1</junit.vintage.version>
+		<junit4.version>4.12</junit4.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -80,6 +85,27 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>${junit-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-runner</artifactId>
+			<version>${junit.platform.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>${junit.vintage.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit4.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
