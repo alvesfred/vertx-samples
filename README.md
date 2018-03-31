@@ -1,8 +1,12 @@
-# vertx-samples
+# Vertx-samples
 
 Vertx.io Samples
 
+# Author
+
+Frederico Cerqueira Alves
+
 # Frameworks
 
-Vertx.io
+Vertx.io,
 JUnit 5
